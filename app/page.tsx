@@ -1,11 +1,16 @@
-import { Button, Htag, P, Tag } from "@/components";
+"use client";
+
+import { Button, Htag, P, Rating, Tag } from "@/components";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [rating, setRating] = useState<number>(0);
+
   return (
     <div>
-      <Htag tag="h1">Hello World</Htag>
+      <Htag tag="h1">qqqqq</Htag>
       <Button apperance="primary" arrow="right">
-        Primary
+        Кнопка
       </Button>
       <Button apperance="ghost" arrow="down">
         Ghost
@@ -25,6 +30,7 @@ export default function Home() {
       <Tag size="small" color="primary">
         Ghost{" "}
       </Tag>
+      <Rating rating={rating} setRating={setRating} isEditable={true} />
     </div>
   );
 }
